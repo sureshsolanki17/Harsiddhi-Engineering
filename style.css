@@ -1,0 +1,439 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --heding-font:'Fira Sans', sans-serif;
+    --normal-font: 'Mukta', sans-serif;
+    --extra-font: 'Roboto', sans-serif;
+}
+/* navigation bar */
+/* style for javaScript */
+.js-scroll {
+    opacity: 0;
+    transition: opacity 1s;
+}
+.js-scroll.scrolled {
+    opacity: 1;
+}
+.scrolled.slideUp {
+    animation-name: slideUp;
+    animation-duration: 1s;
+    visibility: visible;
+}
+@keyframes slideUp {
+    0% {opacity: 0;} 
+    100% {opacity: 1;}
+}
+ul {
+    padding-left: 0px;
+}
+.navbar-js{
+    border-bottom: 1px solid rgb(4, 8, 255);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    animation-name: stckynav;
+    animation-duration: .8s;
+}
+@keyframes stckynav {
+    0%{transform: translateY(-86px);}
+    100%{transform: translateY(0);}
+}
+.navbar-light .navbar-toggler {
+    color: rgb(47, 0, 255);
+    border-color: rgb(47, 0, 255);
+}
+.navbar-toggler:focus {
+    text-decoration: none;
+    outline: 0;
+    box-shadow: 0 0 0 0.1rem;
+}
+.navbar-toggler {
+    padding: 0.4rem 0.5rem;
+    font-size: 1rem;
+    line-height: 1;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 0.5rem;
+    transition: box-shadow .15s ease-in-out;
+}
+.navbar{
+    background-color: #fff;
+}
+.navbar-brand img{
+    height: 60px;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: rgb(0, 0, 0);
+    font-family: var(--normal-font);
+    letter-spacing: 1px;
+    font-size: 18px;
+    font-weight: 200 !important;
+    margin-top: 6px;
+    transition: all .5s ease;
+    position: relative;
+}
+.navbar-light .navbar-nav .nav-link:hover {
+    color: rgb(17, 0, 255);
+}
+.dropdown-toggle::after {
+    display: none;
+}
+.dropdown-menu[data-bs-popper] {
+    top: 100%;
+    left: auto;
+    margin-top: 0.125rem;
+}
+.dropdown-menu.show {
+    animation-name: drop-animation;
+    animation-duration: .5s;
+    transform-origin: top;
+    border-radius: 0px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}    
+.dropdown-item {
+    padding: 0.5rem 1rem !important;
+}
+.dropdown-item:hover {
+    background-color: rgb(17, 0, 255);
+    color: #fff;
+}
+.dropdown-menu.show{
+    animation-name: drop-animation;
+    animation-duration: .5s;
+    transform-origin: top;
+}
+@keyframes drop-animation {
+    0% {transform: scaleY(0);}
+    100% {transform: scaleY(1);}
+}
+/* end nav */
+/* hero section */
+.hero-section{
+    height: 550px;
+    width: 100%;
+    background-image: url(imags/handyman-uses-jackhammer-installation-professional-worker-construction-site-concept-electrician-handyman.jpg);
+    background-size: cover;
+}
+.hero-taxt{
+    background-color: rgb(255, 255, 255);
+    padding: 40px;
+}
+.h1-heding{
+    font-size: 56px;
+    font-weight: 700;
+    font-family: var(--heding-font);
+    color: #000;
+}
+.comen-p{
+    font-size: 22px;
+    font-family: var(--normal-font);
+}
+.my-btn{
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    background-color: rgb(0, 0, 0);
+    border: 1px solid #000;
+    padding: 12px 60px;
+    transition: all .4s ease;
+    font-weight: 500;
+    font-family: var(--normal-font);
+}
+.my-btn:hover{
+    background-color: rgb(183, 240, 241);
+    color: black;
+}
+.my-btn2{
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #000;
+    padding: 12px 60px;
+    transition: all .4s ease;
+    font-weight: 500;
+    font-family: var(--normal-font);
+}
+.my-btn2:hover{
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+.imag-list{
+    width: 15%;
+}
+
+@media only screen and (max-width: 992px) {
+    /* .my-btn2{
+        padding: 10px 30px;
+    } */
+    .imag-list{
+        width: 22%;
+    }
+    .h1-heding{
+        font-size: 42px;
+    }
+    .comen-p{
+        font-size: 16px;
+    }
+    .dropdown-menu.show {
+        box-shadow: none;
+    }   
+}
+@media only screen and (max-width: 600px) {
+    .my-btn{
+        padding: 10px 30px;
+    }
+    .my-btn2{
+        padding: 10px 30px;
+    }
+    .imag-list{
+        width: 22%;
+    }
+    .h1-heding{
+        font-size: 32px;
+    }
+    .comen-p{
+        font-size: 16px;
+    }
+    .nav-link{
+        font-size: 13px !important;
+    }
+    .dropdown-item{
+        font-size: 12px;
+    }
+}
+/* suport section */
+.support-hero{
+    height: 100%;
+    background-color: rgb(243, 243, 243);
+    border-bottom: 8px solid red;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.fq-btn{
+    font-size: 20px;
+    font-family: var(--normal-font);
+    border: none;
+    position: relative;
+    transition: all .4s ease;
+    background-color: none;
+}
+.fq-btn:hover{
+    color: rgb(17, 0, 255);
+}
+.fq-btn::after{
+    content: '';
+    background-color: rgb(17, 0, 255);
+    height: 2px;
+    width: 0;
+    top: 101%;
+    left: 0;
+    transition: all .4s ease;
+    position: absolute;
+}
+.fq-link:hover .fq-btn::after{
+    width: 100%;
+}
+/* box1 */
+.box1{
+    background-image: url(imags/concrete-coring.jpg);
+    background-size: cover;
+}
+@media only screen and (max-width: 768px) {
+    .box1{
+        height: 300px;
+    }
+    .navbar-brand img{
+        height: 35px;
+    }
+}
+/* ----- Services-grid section ----- */
+.Services-grid{
+    height: auto;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 20px;
+}
+.card{
+    height: auto;
+    background-color: #FCBC5B !important;
+}
+.imag-box-service{
+    width: 100%;
+    height: 230px;
+    overflow: hidden;
+}
+.imag-box-service img{
+    width: 100%;
+}
+.card-text{
+    font-size: 22px !important;
+    font-weight: 700;
+}
+.card-btn{
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    font-weight: 400;
+    text-decoration: none;
+    transition: all ease .4s;
+}
+.card-btn:hover{
+    color:  #0d6efd;
+}
+@media only screen and (max-width: 960px) {
+    .imag-box-service{
+        height: 180px !important;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .Services-grid{
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+    .imag-box-service{
+        height: 200px !important;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .Services-grid{
+        display: grid;
+        grid-template-columns: auto;
+    }
+    .imag-box-service{
+        height: 300px !important;
+    }
+    .hero-section{
+        background-image: none;
+        
+    }
+}
+@media only screen and (max-width: 400px) {
+    .my-btn{
+        width: 100%;
+    }
+    .my-btn2{
+        width: 100%;
+        margin-top: 10px;
+    }
+    .imag-box-service{
+        height: 210px !important;
+    }
+}
+/* --------- box 3 ------ */
+.coment-section{
+    width: 100%;
+    background: rgb(2,0,36);
+    background-image: url(imags/concrete-coring.jpg);
+    background-position: right;
+    background-repeat: no-repeat;
+}
+.coment-box{
+    background-color: rgb(255, 255, 255);
+}
+@media only screen and (max-width: 768px) {
+    .coment-section{
+        background: #fff;
+        width: auto;
+    }
+}
+/* ----- footer  ------- */
+.footer-section{
+    background-color: #2B1B9A;
+}
+.footer-ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.icon-size{
+    font-size: 28px;
+}
+.footer-ul a {
+    text-decoration: none;
+    color: #fff;
+    transition: all .3s ease-in;
+}
+.footer-ul li {
+    position: relative;
+}
+.footer-ul li:hover .after-a::after{
+    width: 100%;
+}
+.after-a:hover{
+    color: #84DFFF;
+}
+.after-a::after{
+    content: " ";
+    height: 2px;
+    width: 0;
+    background-color: #84DFFF;
+    position: absolute;
+    z-index: 100;
+    left: 0;
+    top: 110%;
+    transition: all .3s ease;
+}
+.footer-ul-icon {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+.footer-ul-icon a {
+    text-decoration: none;
+    color: #fff;
+    transition: all .3s ease-in;
+}
+.footer-ul-icon li {
+    position: relative;
+}
+.footer-ul-icon li:hover .after-a::after{
+    width: 100%;
+}
+.after-a:hover{
+    color: #84DFFF;
+}
+@media only screen and (max-width: 772px) {
+    .footer-ul{
+        flex-direction: column;
+    }
+}
+/* ----------------------------------------------- */
+.icon-link {  
+    display: inline-flex;
+    font-size: 3rem;  
+    text-decoration: none;  
+    color: var(--color-icon);
+    width: 2.5rem;
+    height: 2.5rem;   
+    transition: .5s linear;
+    position: relative;
+    z-index: 1;
+    margin: auto;
+}
+.icon-link:hover {
+    color: #2B1B9A;
+}
+.icon-link i {
+    margin: auto;    
+}
+.icon-link::before {  
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: #EBE645;
+    border-radius: 50%;
+    z-index: -1;
+    transform: scale(0);
+    transition: 0.5s cubic-bezier(.95, .32, .37, 1.21);
+}
+.icon-link:hover::before {  
+    transform: scale(1);
+}
+
